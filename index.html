@@ -36,6 +36,11 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
                   min-height: 100%;
                }
             </style>
+      <div id="overlay">
+        <div id="text" style="text-align: center;">
+            <h3>Tap or click anywhere on this page to view this website.</h3>
+        </div>
+    </div>
 <audio loop id="bgm">
   <source src="https://aunn.us/assets/bg.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
@@ -45,7 +50,25 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
   Your browser does not support HTML5 video.
 </video>
 <script>
-let audio = new Audio('/assets/bg.mp3');
+   $(document).ready(function () {
+            on()
+        })
+        function on() {
+            document.getElementById("overlay").style.display = "block";
+            document.getElementById("container").style.display = "none";
+        }
+        async function off() {
+            document.getElementById("overlay").style.display = "none";
+            document.getElementById("container").style.display = "block";
+        }
+  $(document).click(function (a) {
+            if (document.getElementById("overlay").style.display == "block") {
+                off()
+            } else {
+            }
+        })
+
+  let audio = new Audio('/assets/bg.mp3');
 audio.volume = 0.5;
 audio.play().catch(e => console.error('Play failed:', e));
 document.addEventListener('click', () => {
