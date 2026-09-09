@@ -51,9 +51,6 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
   Your browser does not support HTML5 video.
 </video>
 <script>
-    let audio = new Audio('/assets/bg.mp3');
-    audio.volume = 0.5;
-  
    $(document).ready(function () {
             on()
         })
@@ -68,6 +65,8 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
   $(document).click(function (a) {
             if (document.getElementById("overlay").style.display == "block") {
                 off()
+                document.getElementById("bgm").play();
+                document.getElementById("bgm").muted = false;
                 document.getElementById("myVideo").play();
                 audio.play().catch(e => console.error('Play failed:', e));
             } else {
