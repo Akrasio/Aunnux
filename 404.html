@@ -85,7 +85,6 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
         function on() {
             document.getElementById("overlay").style.display = "block";
             document.getElementById("container").style.display = "none";
-
         }
         async function off() {
             document.getElementById("overlay").style.display = "none";
@@ -97,12 +96,9 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
                 document.getElementById("bgm").play();
                 document.getElementById("bgm").muted = false;
                 document.getElementById("myVideo").play();
-                audio.play().catch(e => console.error('Play failed:', e));
             } else {
             }
         })
-
-audio.play().catch(e => console.error('Play failed:', e));
 document.addEventListener('click', () => {
 });
 </script>
