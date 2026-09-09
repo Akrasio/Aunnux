@@ -51,6 +51,9 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
   Your browser does not support HTML5 video.
 </video>
 <script>
+    let audio = new Audio('/assets/bg.mp3');
+    audio.volume = 0.5;
+  
    $(document).ready(function () {
             on()
         })
@@ -65,15 +68,14 @@ Relax. I dont have cookies.&quot;"><meta name="twitter:image" content="/assets/O
   $(document).click(function (a) {
             if (document.getElementById("overlay").style.display == "block") {
                 off()
+                document.getElementById("myVideo").play();
+                audio.play().catch(e => console.error('Play failed:', e));
             } else {
             }
         })
 
-  let audio = new Audio('/assets/bg.mp3');
-audio.volume = 0.5;
 audio.play().catch(e => console.error('Play failed:', e));
 document.addEventListener('click', () => {
-  audio.play().catch(e => console.error('Play failed:', e));
 });
 </script>
                   <div class="GUNS__43-018c3d03-bfee722b-0ec7977f GUNS__da-7d43e412-1de3c2c1-729cfd30" style="pointer-events: none; display: none;"><div class="GUNS__33-613bee8a-0ca69d49-3acca887" style="font-weight: 700; font-size: 30px;">click to enter...</div></div><div class="GUNS__fe-90c33375-be430095-db3c34ad"></div><style>
